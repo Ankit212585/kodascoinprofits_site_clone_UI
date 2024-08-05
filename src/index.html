@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Crop in CSS</title>
+    <style>
+      /* Container with hidden overflow */
+      .image-container {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Actual image with clipped path */
+      .cropped-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the container */
+        clip-path: polygon(0 0, 100% 80, 0 100%, 100 70%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container with hidden overflow -->
+    <div class="image-container">
+      <!-- Image to be cropped -->
+      <img
+        class="cropped-image"
+        src="https://picjumbo.com/wp-content/uploads/beautiful-nature-mountain-scenery-with-flowers-free-photo.jpg"
+        alt="Cropped Image"
+      />
+    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+  </body>
+</html>
